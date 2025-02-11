@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('/Users/devanshpratap28/Documents/Python VS Code/Datasets/ML_Practice/Bank_Marketing_ML/static /css/nature1.jpg');
+    background-image: url('nature1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
