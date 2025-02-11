@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Marketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='Bank_marketing.css') }}">
+</head>
+<body>
+    <div id="Outer-div">
+        <div id="inner-div1">
+            <h1>Bank Marketing Campaign Success Predictor</h1>
+        </div>
+        <div id="inner-div2">
+            <form action="{{ url_for('predict') }}" method="post">
+
+                <!-- Age -->
+                <label for="age">Age:</label>
+                <input type="number" min="15" max="100" name="age" id="age" placeholder="Enter Age"  required /><br /><br />
+
+                <!-- Job -->
+                <label for="job">Job:</label>
+                <select name="job" id="job" required>
+                    <option value="">Select job type</option>
+                    <option value="0">Admin</option>
+                    <option value="1">Blue-collar</option> 
+                    <!-- Blue-collar jobs are manual labor or skilled trade jobs that involve physical work. -->
+                    <option value="2">Entrepreneur</option>
+                    <option value="3">Housemaid</option>
+                    <option value="4">Management</option>
+                    <option value="5">Retired</option>
+                    <option value="6">Self-employed</option>
+                    <option value="7">Services</option>
+                    <option value="8">Student</option>
+                    <option value="9">Technician</option>
+                    <option value="10">Unemployed</option>
+                    <option value="11">Unknown</option>
+                </select><br /><br />
+
+                <!-- Marital status -->
+                <label for="marital">Marital Status:</label>
+                <select name="marital" id="marital" required>
+                    <option value="">Select marital status</option>
+                    <option value="0">Divorced</option>
+                    <option value="1">Married</option>
+                    <option value="2">Single</option>
+                    <option value="3">Unknown</option>
+                </select><br /><br />
+
+                <!-- Education -->
+                <label for="education">Education:</label>
+                <select name="education" id="education" required>
+                    <option value="">Select education</option>
+                    <option value="0">basic.4y</option>
+                    <option value="1">basic.6y</option>
+                    <option value="2">basic.9y</option>
+                    <option value="3">High school</option>
+                    <option value="4">Illiterate</option>
+                    <option value="5">Professional course</option>
+                    <option value="6">University degree</option>
+                    <option value="7">Unknown</option>
+                </select><br /><br />
+
+                <!-- Default -->
+                <label for="default">Has credit?: </label>
+                <select name="default" id="default" required>
+                    <option value="">Do you has creadit in default?</option>
+                    <option value="0">no</option>
+                    <option value="1">unknown</option>
+                    <option value="2">yes</option>
+                </select><br /><br />
+
+                <!--Housing -->
+                <label for="housing">Housing Loan: </label>
+                <select name="housing" id="housing" required>
+                    <option value="">Do customer have taken housing loan?</option>
+                    <option value="0">no</option>
+                    <option value="1">unknown</option>
+                    <option value="2">yes</option>
+                </select><br /><br />
+
+                <!-- Loan -->
+                <label for="loan">Loan: </label>
+                <select name="loan" id="loan" required>
+                    <option value="">Do customer have taken personal loan?</option>
+                    <option value="0">no</option>
+                    <option value="1">unknown</option>
+                    <option value="2">yes</option>
+                </select><br /><br />
+
+                <!-- Contact -->
+                <label for="contact">Contact:</label>
+                <select name="contact" id="contact" required>
+                    <option value="">Select Contact Type</option>
+                    <option value="0">cellular</option>
+                    <option value="1">telephone</option>
+                </select><br /><br />
+
+                <!-- Month -->
+                <label for="month">Month:</label>
+                <select name="month" id="month" required>
+                    <option value="">Select last contacted month</option>
+                    <option value="0">apr</option>
+                    <option value="1">aug</option>
+                    <option value="2">dec</option>
+                    <option value="3">jul</option>
+                    <option value="4">jun</option>
+                    <option value="5">mar</option>
+                    <option value="6">may</option>
+                    <option value="7">nov</option>
+                    <option value="8">oct</option>
+                    <option value="9">sep</option>
+                </select><br /><br />
+
+                <!-- Week Day -->
+                <label for="day_of_week">Day of Week:</label>
+                <select name="day_of_week" id="day_of_week" required>
+                    <option value="">Select last contacted Weekday</option>
+                    <option value="0">fri</option>
+                    <option value="1">mon</option>
+                    <option value="2">thu</option>
+                    <option value="3">tue</option>
+                    <option value="4">wed</option>
+                </select><br /><br />
+
+                <!-- Duration -->
+                <label for="duration">Duration (in seconds):</label>
+                <input type="number" name="duration" id="duration" placeholder="Enter last contact duration" required /><br /><br />
+
+                <!-- Campaign -->
+                <label for="campaign">Campaign:</label>
+                <input type="number" name="campaign" id="campaign" placeholder="Frequency of contacts performed " required /><br /><br />
+
+                <!-- Previous -->
+                <label for="previo us">Previous:</label>
+                <input type="number" name="previous" id="previous" placeholder="Frequency of contact performed before this campaign" required /><br /><br />
+
+                <!--Poutcome -->
+                <label for="poutcome">Poutcome:</label>
+                <select name="poutcome" id="poutcome" required>
+                    <option value="">Outcome of previous campaign</option>
+                    <option value="0">failure</option>
+                    <option value="1">nonexistent</option>
+                    <option value="2">success</option>
+                </select><br /><br />
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="inner-div3">
+            <p>{{isSub}}</p>
+        </div>
+    </div>
+</body>
+
+</html>
+

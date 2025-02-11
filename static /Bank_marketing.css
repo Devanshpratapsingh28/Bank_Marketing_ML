@@ -1,0 +1,117 @@
+* {
+    font-family: "K2D", sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('nature1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-size: 15px;
+}
+#Outer-div {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    justify-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    width: 90%;
+    height: 80vh;
+    max-width: 35rem;
+    margin: 0 auto;
+    overflow: auto; /* Scrolling in case of overflow */
+}
+#inner-div1{
+    font-size: 12px;
+}
+input,select {
+    background-color: transparent;
+    resize: none;
+    color: #1c2938;
+    outline: none;
+    border: 2px solid rgb(5, 152, 193); 
+    border-radius: 10px; 
+    padding: 0.5rem; 
+    min-width: 20ch; 
+    color: #0b5371;
+    font-size: 10px;
+}
+input[type=number]::placeholder{
+    color: #0b5371;
+    font-size: 10px;
+}
+input[type=number]{
+    width: 40%;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#inner-div2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+button{
+    width: 100%;
+    cursor: pointer;
+    border: 2px,solid,rgb(5, 152, 193);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(5, 152, 193);
+}
+@media screen and (max-width: 784px) {
+    
+    #inner-div2{
+        font-size: 15px;
+    }
+    input,select {
+        font-size: 10px;
+    }
+    input[type=number]::placeholder{
+        font-size: 10px;
+    }
+    button{
+        font-size: 13px;
+    }
+    #inner-div3{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #inner-div1{
+        font-size: 10px;
+    }
+    input,select {
+        font-size: 8px;
+    }
+    input[type=number]::placeholder{
+        font-size: 8px;
+    }
+    button{
+        font-size: 10px;
+    }#inner-div3{
+        font-size: 15px;
+    }
+}
