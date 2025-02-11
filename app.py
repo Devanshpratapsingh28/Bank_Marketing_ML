@@ -53,6 +53,7 @@ def predict():
             # Make prediction
             prediction = model.predict(pre_data)
             output = int(prediction[0])
+            print(output)
             result = ""
             if output == 1:
                 result =  "The customer will subscribe to the term deposit."
