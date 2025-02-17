@@ -18,7 +18,7 @@ We can specify a location for the environment with the -p flag (or --prefix).
 `python -m venv myenv`
 
 Note : 1. Use python -m venv if you want a simple, Python-specific environment.
-Use conda create -p if you need a more full-featured environment manager with better support for non-Python dependencies and are comfortable with Conda.
+2. Use conda create -p if you need a more full-featured environment manager with better support for non-Python dependencies and are comfortable with Conda.
 
 
 ## Activate the virtual environment:
