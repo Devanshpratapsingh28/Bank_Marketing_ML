@@ -58,8 +58,9 @@ Note :
 4. DecisionTreeClassifier
 5. RandomForestClassifier
 
-Note : Further fine-tuned RandomForestClassifier due to high **accuracy** and **precision**.
-Here, according to me, `Precision is more crucial than Accuracy` because the bank is interested in knowing out of all 'Yes' predictions, how many were actually 'Yes'. Hence, we want to reduce False Positives, and for this, we are focusing on Precision.
+Note : 
+1. Further fine-tuned RandomForestClassifier due to high **accuracy** and **precision**.
+2. Here, according to me, `Precision is more crucial than Accuracy` because the bank is interested in knowing out of all 'Yes' predictions, how many were actually 'Yes'. Hence, we want to reduce False Positives, and for this, we are focusing on Precision.
 ### Accuracy Table 
 ![Accuracy table](model_accuracy.png)
 
