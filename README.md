@@ -67,4 +67,3 @@ Note :
 ### For Home page :
 1. HTML (for form creation)
 2. CSS (for styling)
-
