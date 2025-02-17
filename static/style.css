@@ -15,7 +15,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
-    font-size: 15px;
+    font-size: 16px;
 }
 #Outer-div {
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -48,11 +48,11 @@ input,select {
     padding: 0.5rem; 
     min-width: 20ch; 
     color: #0b5371;
-    font-size: 10px;
+    font-size: 12px;
 }
 input[type=number]::placeholder{
     color: #0b5371;
-    font-size: 10px;
+    font-size: 12px;
 }
 input[type=number]{
     width: 40%;
@@ -86,10 +86,10 @@ button{
         font-size: 15px;
     }
     input,select {
-        font-size: 10px;
+        font-size: 11.25px;
     }
     input[type=number]::placeholder{
-        font-size: 10px;
+        font-size: 11.25px;
     }
     button{
         font-size: 13px;
@@ -97,6 +97,9 @@ button{
     #inner-3{
         font-size: 15px;
     }
+}
+#inner-3{
+    color: red;
 }
 
 @media screen and (max-width: 480px) {

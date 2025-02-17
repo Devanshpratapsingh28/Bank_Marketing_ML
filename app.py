@@ -6,15 +6,13 @@ from flask import Flask, request, render_template, jsonify
 
 app = Flask(__name__, static_folder='static', static_url_path='/static')
 
-# Load preprocessing pipeline and expected feature names
 with open('preprocessing.pkl', 'rb') as f:
     preprocessing_pipeline, feature_names = pickle.load(f)
 
-# Load trained RandomForestClassifier model
-with gzip.open("rf.pkl.gz", "rb") as f:
+with open('random_forest_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
-# Define original input feature names (before preprocessing)
+
 original_columns = [
     'age', 'job', 'marital', 'education', 'default', 'housing', 'loan',
     'contact', 'month', 'day_of_week', 'duration', 'campaign',
@@ -30,19 +28,18 @@ def predict():
         try:
             form_data = request.form.to_dict()
 
-            # Convert input values to the correct format (numeric/categorical)
             input_data = []
             for col in original_columns:
                 val = form_data.get(col)
                 if val is None:
+                    print("Post_Request_None")
                     return render_template("index.html", error=f"Missing value for {col}")
-
-                # Convert to float if possible
+                
                 try:
                     float_val = float(val)
                     input_data.append(int(float_val) if float_val.is_integer() else round(float_val, 2))
                 except ValueError:
-                    input_data.append(val)  # Keep categorical values as strings
+                    print("Error")
 
             # Convert to DataFrame
             df_data = pd.DataFrame([input_data], columns=original_columns)
@@ -53,7 +50,7 @@ def predict():
             # Make prediction
             prediction = model.predict(pre_data)
             output = int(prediction[0])
-            print(output)
+            print("output",output)
             result = ""
             if output == 1:
                 result =  "The customer will subscribe to the term deposit."
