@@ -69,9 +69,8 @@ Below table is showing accuracy score of various models used in this task:
 | SGD                         | 0.44      | 0.80   | 0.57     | 86.05        |
 | Decision Tree               | 0.43      | 0.52   | 0.47     | 86.84        |
 | Random Forest               | 0.58      | 0.49   | 0.53     | 90.13        |
-| Random Forest (RSCV)        | 0.46      | 0.74   | 0.56     | 86.99        |
 
-### Best Model : Logistic Regression and Lasso Regression
+### Best Model : Random Forest
 ### Note : 
   1. Further fine-tuned RandomForestClassifier due to high **accuracy** and **precision**.
   2. Here, according to me, `Precision is more crucial than Accuracy` because the bank is interested in knowing out of all 'Yes' predictions, how many were actually 'Yes'. Hence, we want        to reduce False Positives, and for this, we are focusing on Precision.
