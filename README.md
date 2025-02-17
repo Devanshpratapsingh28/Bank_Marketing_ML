@@ -58,11 +58,23 @@ Note :
 4. DecisionTreeClassifier
 5. RandomForestClassifier
 
-Note : 
-1. Further fine-tuned RandomForestClassifier due to high **accuracy** and **precision**.
-2. Here, according to me, `Precision is more crucial than Accuracy` because the bank is interested in knowing out of all 'Yes' predictions, how many were actually 'Yes'. Hence, we want to reduce False Positives, and for this, we are focusing on Precision.
-### Accuracy Table 
-![Accuracy table](model_accuracy.png)
+### Accuracy Table
+
+Below table is showing accuracy score of various models used in this task:
+
+| Model                      | Precision | Recall | F1 Score | Accuracy (%) |
+|----------------------------|-----------|--------|----------|--------------|
+| Logistic Regression         | 0.43      | 0.82   | 0.56     | 85.41        |
+| KNearest Neighbour          | 0.39      | 0.77   | 0.52     | 83.62        |
+| SGD                         | 0.44      | 0.80   | 0.57     | 86.05        |
+| Decision Tree               | 0.43      | 0.52   | 0.47     | 86.84        |
+| Random Forest               | 0.58      | 0.49   | 0.53     | 90.13        |
+| Random Forest (RSCV)        | 0.46      | 0.74   | 0.56     | 86.99        |
+
+### Best Model : Logistic Regression and Lasso Regression
+### Note : 
+  1. Further fine-tuned RandomForestClassifier due to high **accuracy** and **precision**.
+  2. Here, according to me, `Precision is more crucial than Accuracy` because the bank is interested in knowing out of all 'Yes' predictions, how many were actually 'Yes'. Hence, we want        to reduce False Positives, and for this, we are focusing on Precision.
 
 ### For Home page :
 1. HTML (for form creation)
