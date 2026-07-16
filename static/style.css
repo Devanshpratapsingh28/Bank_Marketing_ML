@@ -1,120 +1,214 @@
 * {
     font-family: "K2D", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
     width: 100%;
     height: 100vh;
-    padding: 0;
-    margin: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('nature1.jpg');
+    background-image: url("nature1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
-    font-size: 16px;
-}
-#Outer-div {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    justify-items: center;
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-    width: 90%;
-    height: 80vh;
-    max-width: 35rem;
-    margin: 0 auto;
-    overflow: auto; /* Scrolling in case of overflow */
-}
-#inner-div1{
-    font-size: 12px;
-}
-input,select {
-    background-color: transparent;
-    resize: none;
-    color: #1c2938;
-    outline: none;
-    border: 2px solid rgb(5, 152, 193); 
-    border-radius: 10px; 
-    padding: 0.5rem; 
-    min-width: 20ch; 
-    color: #0b5371;
-    font-size: 12px;
-}
-input[type=number]::placeholder{
-    color: #0b5371;
-    font-size: 12px;
-}
-input[type=number]{
-    width: 40%;
-}
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-#inner-div2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-}
-button{
-    width: 100%;
-    cursor: pointer;
-    border: 2px,solid,rgb(5, 152, 193);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(5, 152, 193);
-}
-@media screen and (max-width: 784px) {
-    
-    #inner-div2{
-        font-size: 15px;
-    }
-    input,select {
-        font-size: 11.25px;
-    }
-    input[type=number]::placeholder{
-        font-size: 11.25px;
-    }
-    button{
-        font-size: 13px;
-    }
-    #inner-3{
-        font-size: 15px;
-    }
-}
-#inner-3{
-    color: red;
 }
 
-@media screen and (max-width: 480px) {
-    #inner-div1{
-        font-size: 10px;
+#Outer-div {
+    width: 90%;
+    max-width: 700px;
+    height: 85vh;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.30);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 15px rgba(0,0,0,.4);
+
+    overflow-y: auto;
+}
+
+#inner-div1{
+    width:100%;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+#inner-div1 h1{
+    font-size:32px;
+}
+
+#inner-div2{
+    width:100%;
+}
+
+form{
+    width:100%;
+}
+
+label{
+    display:inline-block;
+    width:180px;
+    color:#0b5371;
+    font-weight:bold;
+    font-size:16px;
+    vertical-align:middle;
+}
+
+input,
+select{
+    width:250px;
+    padding:10px;
+
+    border:2px solid rgb(5,152,193);
+    border-radius:10px;
+
+    background:transparent;
+    outline:none;
+
+    color:#0b5371;
+    font-size:14px;
+}
+
+input::placeholder{
+    color:#0b5371;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance:none;
+    margin:0;
+}
+
+button{
+    width:100%;
+    padding:12px;
+
+    border:none;
+    border-radius:10px;
+
+    background:rgb(5,152,193);
+
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+button:hover{
+    background:rgb(4,130,165);
+}
+
+#result-div{
+    width:100%;
+    margin-top:20px;
+
+    padding:15px;
+
+    border:2px solid rgb(5,152,193);
+    border-radius:10px;
+
+    background:rgba(255,255,255,.25);
+
+    text-align:center;
+}
+
+#result-div h2{
+    color:#0b5371;
+    margin-bottom:12px;
+}
+
+#prediction{
+    color:red;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+#confidence{
+    color:#0b5371;
+    font-size:16px;
+    font-weight:bold;
+}
+
+#error-div{
+    margin-top:20px;
+    color:red;
+    font-weight:bold;
+    text-align:center;
+}
+
+@media(max-width:768px){
+
+    #Outer-div{
+        width:95%;
+        height:90vh;
     }
-    input,select {
-        font-size: 8px;
+
+    #inner-div1 h1{
+        font-size:24px;
     }
-    input[type=number]::placeholder{
-        font-size: 8px;
+
+    label{
+        display:block;
+        width:100%;
+        margin-bottom:6px;
     }
+
+    input,
+    select{
+        width:100%;
+    }
+
     button{
-        font-size: 10px;
-    }#inner-3{
-        font-size: 15px;
+        font-size:16px;
+    }
+
+    #prediction{
+        font-size:16px;
+    }
+
+    #confidence{
+        font-size:14px;
+    }
+}
+
+@media(max-width:480px){
+
+    #inner-div1 h1{
+        font-size:20px;
+    }
+
+    label{
+        font-size:14px;
+    }
+
+    input,
+    select{
+        font-size:12px;
+    }
+
+    button{
+        font-size:14px;
+    }
+
+    #prediction{
+        font-size:14px;
+    }
+
+    #confidence{
+        font-size:12px;
     }
 }
